@@ -16,7 +16,7 @@ public class FPSDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        frameCount = frameCount * frameCount + 1;
+        frameCount = frameCount + 1;
         Debug.Log(frameCount);
     }
 }

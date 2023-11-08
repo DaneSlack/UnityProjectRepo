@@ -29,17 +29,16 @@ public class TestScript : MonoBehaviour
     void Update()
     {
         //transform.Translate(0.02f, 0, 0);
-        //Debug.Log("Words");
+        Debug.Log("Words");
 
-        targetingScale = targetingScale + 0.01f;
-        Debug.Log(targetingScale);
+        //targetingScale = targetingScale + 0.01f;
+        //Debug.Log(targetingScale);
 
-        changingScale.x = targetingScale;
-        changingScale.y = targetingScale;
-        changingScale.z = targetingScale;
+        //changingScale.x = targetingScale;
+        //changingScale.y = targetingScale;
+        //changingScale.z = targetingScale;
 
-        transform.localScale = changingScale;
-
+        //transform.localScale = changingScale;
 
     }
 
