@@ -45,13 +45,13 @@ public class RandomMovement : MonoBehaviour
         {
             savedUnityRunTime = Time.time;
             wanderDuration = Random.Range(2.0f, 5.0f);
-            randomSpeed = Random.Range(0.1f, 0.5f);
+            randomSpeed = Random.Range(0.1f, 1.5f);
             randomX = Random.Range(-1.0f, 1.0f);
             randomY = Random.Range(-1.0f, 1.0f);;
         }
         unityRunTime = Time.time;
         Vector2 direction = new Vector2(randomX, randomY).normalized;
-        transform.Translate(randomSpeed * direction * Time.deltaTime, 0);
+        transform.Translate((UnityEngine.Mathf.Pow(randomSpeed, 10)) * direction * Time.deltaTime, 0);
 
     }
 }
