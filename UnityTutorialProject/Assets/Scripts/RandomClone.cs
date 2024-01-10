@@ -6,15 +6,24 @@ public class RandomClone : MonoBehaviour
 {
     [SerializeField]
     GameObject[] toClone;
+    GameObject chosenToClone = null;
+    GameObject clonedObject = null;
+
     [SerializeField]
-    float maxPos = 0;
+    float minpos = -10;
     [SerializeField]
-    float minPos = 0;
+    float maxPos = 10;
+    Vector3 randomPos = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
-        int chosenIndex;
-        GameObject[] chosenToClone;
+        int chosenIndex = Random.Range(0, toClone.Length);
+        chosenToClone = toClone [chosenIndex];
+        clonedObject = Instantiate(chosenToClone);
+        randomPos.x = Random.Range(minpos, maxPos);
+        randomPos.y = Random.Range(minpos, maxPos);
+        clonedObject.transform.position = randomPos;
     }
 
     // Update is called once per frame
